@@ -57,6 +57,7 @@
 
 .aa-dropdown-menu .autocomplete-header-title {
 	float: left;
+	clear: both;
 }
 
 .aa-dropdown-menu .autocomplete-header-more {
@@ -75,17 +76,17 @@
 /* Suggestion */
 
 .aa-dropdown-menu .aa-suggestion {
-	padding: 5px 0;
+	/*padding: 5px 0;*/
 
 }
 
 .aa-dropdown-menu .aa-suggestion:after {
-	visibility: hidden;
+/*	visibility: hidden;
 	display: block;
 	font-size: 0;
 	content: " ";
 	clear: both;
-	height: 0;
+	height: 0;*/
 }
 
 .aa-dropdown-menu .aa-suggestion em {
@@ -104,7 +105,7 @@
 
 .aa-dropdown-menu .aa-suggestion .suggestion-post-content {
 	color: #63676d;
-	display: block;
+	_display: block;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -139,23 +140,28 @@
 }
 
 .aa-dropdown-menu .suggestion-post-thumbnail {
-	float: left;
+	_float: left;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	border-radius: 3px;
-	width: 32px;
-	height: 32px;
+	width: 320px;
+	height: auto;
 }
 
 .aa-dropdown-menu .suggestion-user-thumbnail {
-	float: left;
+	_float: left;
 	margin-right: 5px;
 	margin-bottom: 5px;
 	border-radius: 16px;
-	width: 32px;
-	height: 32px;
+	width: 320px;
+	height: auto;
 }
-
+.aa-dropdown-menu .suggestion-post-coll{
+	width: 33%;
+	padding:5px;
+	float: left;
+	overflow: hidden;
+}
 /* Footer */
 .aa-dropdown-menu .autocomplete-footer-branding {
 	padding: 15px 14px 0px;

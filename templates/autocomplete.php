@@ -6,7 +6,7 @@
 </script>
 
 <script type="text/html" id="tmpl-autocomplete-post-suggestion">
-  <a class="suggestion-link" href="{{ data.permalink }}" title="{{ data.post_title }}">
+<!--   <a class="suggestion-link" href="{{ data.permalink }}" title="{{ data.post_title }}">
 	<# if ( data.images.thumbnail ) { #>
 	  <img class="suggestion-post-thumbnail" src="{{ data.images.thumbnail.url }}" alt="{{ data.post_title }}">
 	  <# } #>
@@ -16,7 +16,18 @@
 			<span class="suggestion-post-content">{{{ data._snippetResult['content'].value }}}</span>
 			<# } #>
 		</div>
-  </a>
+  </a> -->
+	<div class="suggestion-post-coll">
+		<# if ( data.images.thumbnail ) { #>
+			<img class="suggestion-post-thumbnail" src="{{ data.images.thumbnail.url }}" alt="{{ data.post_title }}">
+		<# } #>
+		<div class="suggestion-post-attributes">
+			<span class="suggestion-post-title">{{{ data._highlightResult.post_title.value }}}</span>
+			<# if ( data._snippetResult['content'] ) { #>
+				<span class="suggestion-post-content">{{{ data._snippetResult['content'].value }}}</span>
+			<# } #>
+		</div>
+	</div>
 </script>
 
 <script type="text/html" id="tmpl-autocomplete-term-suggestion">
